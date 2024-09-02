@@ -1,6 +1,6 @@
 <?php
 $page = "home page";
-$background = "https://placehold.co/400";
+$background = "../assets/ultra-detailed-nebula-abstract-wallpaper-4.jpg";
 include '../includes/header.php';
 include '../includes/heading.php';
 $name = "Peter";
