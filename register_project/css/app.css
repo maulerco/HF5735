@@ -1,0 +1,134 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: #273E47;
+  color: #D8C99B;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+footer {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 340px;
+}
+
+.form__element {
+  width: 96%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+.form__element input {
+  height: 30px;
+  border: 0;
+  border-radius: 10px;
+  background-color: #BD632F;
+  color: #D8C99B;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 5%;
+  line-height: 130%;
+}
+.form__element label {
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+fieldset {
+  border: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+fieldset legend {
+  text-align: center;
+}
+fieldset div {
+  margin-right: 50px;
+}
+
+button {
+  width: 50%;
+  height: 30px;
+  margin-top: 20px;
+  border-radius: 100px;
+  border: 0;
+  background-color: #D8C99B;
+  color: #A4243B;
+  font-weight: 700;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  text-transform: uppercase;
+  font-size: 16px;
+}
+
+#welcomeLink {
+  display: block;
+  text-decoration: none;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 50px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-size: 16px;
+  color: #BD632F;
+  font-weight: 700;
+}
+#welcomeLink:hover {
+  color: #fff;
+}
+
+@media only screen and (min-width: 767px) {
+  form {
+    width: 480px;
+  }
+}
+@media only screen and (max-width: 380px) {
+  form {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+@media only screen and (min-width: 991px) {
+  form {
+    width: 980px;
+    font-size: 2rem;
+  }
+  #welcomeLink {
+    font-size: 2rem;
+  }
+  footer {
+    font-size: 2rem;
+  }
+  button {
+    font-size: 2rem;
+    width: 50%;
+    height: 60px;
+  }
+}
+.welcomeContent {
+  width: 90%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}/*# sourceMappingURL=app.css.map */

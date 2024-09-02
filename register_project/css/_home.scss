@@ -1,0 +1,121 @@
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 340px;
+}
+
+.form__element {
+    width: 96%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+
+    input {
+        height: 30px;
+        border: 0;
+        border-radius: 10px;
+        background-color: $orange-color;
+        color: $text-color;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-size: 14px;
+        font-weight: 700;
+        padding: 5%;
+        line-height: 130%;
+    }
+
+    label {
+        text-align: center;
+        margin-bottom: 5px;
+    }
+}
+
+fieldset {
+    border: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    legend {
+        text-align: center;
+    }
+
+    div {
+        margin-right: 50px;
+    }
+}
+
+button {
+    width: 50%;
+    height: 30px;
+
+    margin-top: 20px;
+
+    border-radius: 100px;
+    border: 0;
+
+    background-color: $text-color;
+    color: $purple-color;
+
+    font-weight: 700;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+#welcomeLink {
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 50px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    color: $orange-color;
+    font-weight: 700;
+    &:hover{
+        color: #fff;
+    }
+}
+
+@media only screen and (min-width: 767px) {
+    form {
+        width: 480px;
+    }
+}
+
+@media only screen and (max-width: 380px) {
+    form {
+        width: 80%;
+        margin: 0 auto;
+    }
+}
+
+@media only screen and (min-width: 991px) {
+    form {
+        width: 980px;
+        font-size: 2rem;
+    }
+
+    #welcomeLink {
+        font-size: 2rem;
+    }
+
+    footer {
+        font-size: 2rem;
+    }
+
+    button {
+        font-size: 2rem;
+        width: 50%;
+        height: 60px;
+    }
+}
