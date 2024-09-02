@@ -29,6 +29,8 @@
 
         $_SESSION["popcornPreference"] = $_POST["popcornPreference"];
         setcookie("popcornPreference", $_POST["popcornPreference"], $cookie_expiration, "/");
+
+        header("Location: welcome.php");
     }
     
     // // Check if the name is set in the session
