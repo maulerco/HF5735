@@ -1,4 +1,8 @@
+# Enable Rewrite Engine
 RewriteEngine On
 
+# Rewrite for cleaner URLs
+# Map /login, /register, etc. to their respective folders
 RewriteRule ^$ index.php [L]
 RewriteRule ^register$ register/index.php [L]
+RewriteRule ^admin$ public/admin/index.php [L]
