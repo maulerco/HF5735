@@ -17,7 +17,7 @@ include_once "../includes/header.php";
                 }
             ?>
         <section class="login-form">
-            <form action="<?= ROOT_DIR ?>auth/register/register.php" method="post" class="">
+            <form action="<?= ROOT_DIR ?>register/register.php" method="post" class="">
                 <input type="hidden" name="is_active" value="1">
                 <input type="hidden" name="is_admin" value="1">
                 <label for="username">Username</label>
@@ -37,6 +37,6 @@ include_once "../includes/header.php";
 
     </main>
     
-<?php include_once '../../partials/footer.php';
+<?php include_once '../includes/footer.php';
 
 

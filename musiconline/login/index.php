@@ -18,7 +18,7 @@ include_once "../includes/header.php";
             ?>
         </p>
         <section class="login-form">
-            <form action="<?= ROOT_DIR ?>auth/login/authenticate.php" method="post">
+            <form action="<?= ROOT_DIR ?>login/authenticate.php" method="post">
                 <label for="username">Username</label>
                 <input type="text"
                        class=""

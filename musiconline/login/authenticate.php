@@ -7,7 +7,7 @@ session_start();
 if (empty($_POST['username']) || empty($_POST['password'])) {
     // Set a session error message and redirect to the login page if fields are empty
     $_SESSION['status_message'] = 'Please fill both the username and password fields!';
-    header('Location: ../../login');
+    header('Location: ../login');
     exit();
 }
 
@@ -37,9 +37,9 @@ if ($stmt = $conn->prepare('SELECT id, password, is_admin FROM user WHERE userna
 
             // Redirect based on user type (admin or regular user)
             if ($admin == 1) {
-                header('Location: ../public/admin');
+                header('Location: ../admin');
             } else {
-                header('Location: ../public/user');
+                header('Location: ../user');
             }
             exit();
         } else {
