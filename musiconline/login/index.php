@@ -2,7 +2,7 @@
 
 include_once '../../config/dbConfig.php';
 
-include_once "../../partials/header.php";
+include_once "../header.php";
 
 ?>
 
