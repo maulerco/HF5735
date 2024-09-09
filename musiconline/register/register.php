@@ -1,5 +1,5 @@
 <?php
-include '../../config/dbConfig.php';
+include '../config/dbConfig.php';
 session_start();
 
 // Input sanitization

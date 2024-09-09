@@ -1,8 +1,8 @@
 <?php 
 
-include_once '../../config/dbConfig.php';
+include_once '../config/dbConfig.php';
 
-include_once "../header.php";
+include_once "../includes/header.php";
 
 ?>
 
@@ -36,7 +36,7 @@ include_once "../header.php";
             </form> 
             <div class="login-options">
                 <div>
-                    <a href="../register">Don't ahave an account? <span>REGISTER</span></a>
+                    <a href="../register">Don't have an account? <span>REGISTER</span></a>
                 </div>
             </div>
         </section>

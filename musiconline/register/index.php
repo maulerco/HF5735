@@ -1,8 +1,10 @@
 <?php 
 
-include '../../config/dbConfig.php';
+include_once '../config/dbConfig.php';
 
-include_once "../header.php"; ?>
+include_once "../includes/header.php";
+
+?>
 
 
     <main class="login register">

@@ -2,8 +2,8 @@
 
 
 $hn = "localhost";
-$un = "admin";
-$pw = "{{ add your password }}";
+$un = "bro";
+$pw = "135798462";
 $db = "musiconline";
 
 // Create database connection

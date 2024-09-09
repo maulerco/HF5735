@@ -1,6 +1,6 @@
 <?php
 // Start sessions and include the database configuration file
-require '../../config/dbConfig.php';
+require '../config/dbConfig.php';
 session_start();
 
 // Check if login form was submitted
@@ -37,9 +37,9 @@ if ($stmt = $conn->prepare('SELECT id, password, is_admin FROM user WHERE userna
 
             // Redirect based on user type (admin or regular user)
             if ($admin == 1) {
-                header('Location: ../../admin');
+                header('Location: ../public/admin');
             } else {
-                header('Location: ../../user');
+                header('Location: ../public/user');
             }
             exit();
         } else {
