@@ -19,7 +19,7 @@
     <?php while($album->fetch()) : ?>
     <div>
         <h2><?= $albName ?></h2>
-        <img src="" alt="">
+        <img src="<?= ROOT_DIR ?>assets/img/<?= $image ?>" alt="">
         <h2><?= $albDesc ?></h2>
         <span><?= $release ?></span>
     </div>
