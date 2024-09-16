@@ -2,8 +2,8 @@
 
 
 $hn = "localhost";
-$un = "bro";
-$pw = "135798462";
+$un = "dopamine";
+$pw = "123456";
 $db = "musiconline";
 
 // Create database connection
