@@ -57,7 +57,7 @@ if ($stmt->num_rows > 0) {
         // If account creation is successful
         if ($stmt->affected_rows > 0) {
             $_SESSION['status_message'] = 'Account successfully created! You can now log in.';
-            header('Location: ../../login');
+            header('Location: ../login');
         } else {
             $_SESSION['status_message'] = 'Account creation failed. Please try again later.';
             header('Location: ../register');

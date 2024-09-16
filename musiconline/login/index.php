@@ -10,7 +10,6 @@ include_once "../includes/header.php";
         <h2 class="header">LOGIN</h2>
         <p>
         <?php
-                session_start();
                 if (isset($_SESSION['status_message'])) {
                     echo '<div class="status-message">' . $_SESSION['status_message'] . '</div>';
                     unset($_SESSION['status_message']);
