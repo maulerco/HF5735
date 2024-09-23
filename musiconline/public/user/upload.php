@@ -1,6 +1,6 @@
 <?php 
     include 'includes/header.php';
-    include 'config/config.php';
+    include 'config/dbConfig.php';
     // if(!isset($_SESSION['loggedin'])){
     //     header('Location: login');
     // }
