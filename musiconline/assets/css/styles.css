@@ -2,11 +2,13 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    }
-    header {
+}
+
+header {
     background-color: #333;
-    }
-    .navbar {
+}
+
+.navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -14,13 +16,15 @@ body {
     color: white;
     background: black;
     height: 60px;
-    }
-    .logo a {
+}
+
+.logo a {
     color: white;
     text-decoration: none;
     font-size: 24px;
-    }
-    .nav-links {
+}
+
+.nav-links {
     list-style: none;
     display: none; /* Hidden by default */
     width: 100%;
@@ -31,60 +35,83 @@ body {
     position: absolute;
     top: 60px;
     left: 0;
-    }
-    .nav-links li {
+}
+
+.nav-links li {
     text-align: center;
     margin: 0;
-    }
-    .nav-links a {
+}
+
+.nav-links a {
     color: white;
     text-decoration: none;
     padding: 14px;
     display: block;
-    }
-    .nav-links a:hover {
+}
+
+.nav-links a:hover {
     background-color: #575757;
     border-radius: 0;
-    }
-    .menu-toggle {
+}
+
+.menu-toggle {
     display: flex;
     flex-direction: column;
     cursor: pointer;
-    }
-    .menu-toggle span {
+}
+
+.menu-toggle span {
     background: white;
     height: 3px;
     width: 25px;
     margin: 3px 0;
     border-radius: 2px;
-    }
-    /* When the .active class is added to .nav-links, show the mobile menu */
-    .nav-links.active {
+}
+
+/* When the .active class is added to .nav-links, show the mobile menu */
+.nav-links.active {
     display: flex; /* Shows the mobile menu */
-    }
-    /* Min-width for Desktop (768px and above) */
-    @media (min-width: 768px) {
+}
+
+/* vinyl page */
+.vinyl {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.vinyl div {flex: 1 1 300px;margin: 20px;}
+
+img {
+    width: 100%;
+}
+/* Min-width for Desktop (768px and above) */
+@media (min-width: 768px) {
     .navbar {
-    padding: 0 40px;
+        padding: 0 40px;
     }
+
     .nav-links {
-    display: flex; /* Show the menu by default on larger screens */
-    flex-direction: row;
-    position: static;
-    width: auto;
-    background-color: transparent;
+        display: flex; /* Show the menu by default on larger screens */
+        flex-direction: row;
+        position: static;
+        width: auto;
+        background-color: transparent;
     }
+
     .nav-links li {
-    margin: 0 10px;
+        margin: 0 10px;
     }
+
     .menu-toggle {
-    display: none; /* Hide the hamburger menu on desktop */
+        display: none; /* Hide the hamburger menu on desktop */
     }
+
     .nav-links a {
-    padding: 14px 20px;
-    border-radius: 4px;
+        padding: 14px 20px;
+        border-radius: 4px;
     }
+
     .nav-links a:hover {
-    background-color: #575757;
+        background-color: #575757;
     }
-    }
+}

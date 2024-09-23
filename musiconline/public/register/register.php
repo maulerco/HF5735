@@ -1,5 +1,5 @@
 <?php
-include '../config/dbConfig.php';
+include 'config/dbConfig.php';
 session_start();
 
 // Input sanitization
@@ -10,21 +10,21 @@ $password = trim($_POST['password']);
 // Validate username (alphanumeric)
 if (!preg_match('/^[a-zA-Z0-9]+$/', $username)) {
     $_SESSION['status_message'] = 'Username is not valid! Only alphanumeric characters are allowed.';
-    header('Location: ../register');
+    header('Location: register');
     exit();
 }
 
 // Validate password (between 5 and 20 characters)
 if (strlen($password) < 5 || strlen($password) > 20) {
     $_SESSION['status_message'] = 'Password must be between 5 and 20 characters long!';
-    header('Location: ../register');
+    header('Location: register');
     exit();
 }
 
 // Validate email (basic validation, can be expanded)
 if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
     $_SESSION['status_message'] = 'Invalid email format!';
-    header('Location: ../register');
+    header('Location: register');
     exit();
 }
 
@@ -38,7 +38,7 @@ if ($stmt->num_rows > 0) {
     // Username already exists
     $_SESSION['status_message'] = 'Username already exists! Please choose another.';
     $stmt->close();
-    header('Location: ../register');
+    header('Location: register');
     exit();
 } else {
     $stmt->close();
@@ -57,16 +57,16 @@ if ($stmt->num_rows > 0) {
         // If account creation is successful
         if ($stmt->affected_rows > 0) {
             $_SESSION['status_message'] = 'Account successfully created! You can now log in.';
-            header('Location: ../login');
+            header('Location: login');
         } else {
             $_SESSION['status_message'] = 'Account creation failed. Please try again later.';
-            header('Location: ../register');
+            header('Location: register');
         }
 
         $stmt->close();
     } else {
         $_SESSION['status_message'] = 'Database error. Please try again later.';
-        header('Location: ../register');
+        header('Location: register');
     }
 
     $conn->close();

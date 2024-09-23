@@ -1,32 +1,34 @@
 <?php
-    include 'config/dbConfig.php';
-    include 'includes/header.php';
 
-    //bring in album details
+// Get the requested URL from the 'url' query parameter
+$url = isset($_GET['url']) ? rtrim($_GET['url'], '/') : '';
 
-    $album = $conn->prepare("SELECT
-    albName,
-    albDescription,
-    release_date,
-    image
-    FROM album");
-    $album->execute();
-    $album->store_result();
-    $album->bind_result($albName, $albDesc, $release, $image);
-?>
+// Define available routes (URL => corresponding PHP file)
+$routes = [
+    '' => 'public/index.php',          // Home route
+    'vinyl' => 'public/vinyl.php',          // Home route
+    'register' => 'public/register/index.php',    // register page route
+    'login' => 'public/login/index.php', // login page route
+    'admin' => 'public/admin/index.php', // admin page route
+    'user' => 'public/user/index.php', // user page route
+    'uploads' => 'public/user/upload.php', // upload page route
+    'account' => 'public/user/account.php', // account page route
+    'allUsers' => 'public/admin/allUsers.php', // allusers page route
+    'pending' => 'public/admin/pending.php', // pending page route
+    // config routes
+    'authenticate' => 'public/login/authenticate.php', // logging in user page config route
+    'registerConfig' => 'public/register/register.php', // registering user page config route
+    'uploadConfig' => 'public/user/uploadConfig.php', // pending page route
+    'logout' => 'public/logout.php', // pending page route
 
-<main>
-    <?php while($album->fetch()) : ?>
-    <div>
-        <h2><?= $albName ?></h2>
-        <img src="<?= ROOT_DIR ?>assets/img/<?= $image ?>" alt="">
-        <h2><?= $albDesc ?></h2>
-        <span><?= $release ?></span>
-    </div>
-    <?php endwhile ?>
-</main>
+];
 
-
-<?php
-    include 'includes/footer.php';
+// Check if the URL matches a route
+if (array_key_exists($url, $routes)) {
+    require $routes[$url];  // Load the appropriate file for the route
+} else {
+    // If no route matches, show a 404 page
+    require '404.php';
+}
+// 
 ?>

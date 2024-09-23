@@ -1,22 +1,21 @@
 <?php 
 
-include_once '../config/dbConfig.php';
-
-include_once "../includes/header.php";
+include 'config/dbConfig.php';
+include 'includes/header.php';
 
 ?>
-
 
     <main class="login register">
         <h2 class="header">REGISTER</h2>
         <?php
+               
                 if (isset($_SESSION['status_message'])) {
                     echo '<div class="status-message">' . $_SESSION['status_message'] . '</div>';
                     unset($_SESSION['status_message']);
                 }
             ?>
         <section class="login-form">
-            <form action="<?= ROOT_DIR ?>register/register.php" method="post" class="">
+            <form action="<?= ROOT_DIR ?>registerConfig" method="post" class="">
                 <input type="hidden" name="is_active" value="1">
                 <input type="hidden" name="is_admin" value="1">
                 <label for="username">Username</label>
@@ -28,14 +27,13 @@ include_once "../includes/header.php";
                 <input type="submit" class="submit">
             </form>
             <div class="login-options">
-                <a href="../login">Already have an account? <span>login now</span></a>
+                <a href="login">Already have an account? <span>login now</span></a>
             </div>
             <div class="msg"></div>
         </section>
 
 
     </main>
-    
-<?php include_once '../includes/footer.php';
-
-
+    <?php
+    include 'includes/footer.php';
+?>

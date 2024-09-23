@@ -1,8 +1,7 @@
 <?php
-    include 'config/dbConfig.php';
+include 'config/dbConfig.php';
     include 'includes/header.php';
 
-    // bring in album details
     $album = $conn->prepare("SELECT
     albName,
     albDescription,
@@ -13,12 +12,13 @@
     $album->store_result();
     $album->bind_result($albName, $albDesc, $release, $image);
 ?>
+    <h1>Vinyl Page</h1>
 
 <main class="vinyl">
     <?php while($album->fetch()) : ?>
     <div>
         <h2><?= $albName ?></h2>
-        <img src="<?= ROOT_DIR ?>assets/img/<?= $image ?>" alt="" >
+        <img src="<?= ROOT_DIR ?>assets/images/<?= $image ?>" alt="" >
         <h2><?= $albDesc ?></h2>
         <span><?= $release ?></span>
     </div>

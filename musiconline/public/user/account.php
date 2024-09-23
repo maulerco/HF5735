@@ -5,5 +5,5 @@
     }
      
 ?>
-<h1>Admin dashboard</h1>
+<h1>Account details</h1>
 <?php include 'includes/footer.php'; ?>

@@ -1,15 +1,13 @@
 <?php 
 
-include_once '../config/dbConfig.php';
-
-include_once "../includes/header.php";
-
+include 'config/dbConfig.php';
+include 'includes/header.php';
 ?>
-
-    <main class="login">
+  <main class="login">
         <h2 class="header">LOGIN</h2>
         <p>
         <?php
+                
                 if (isset($_SESSION['status_message'])) {
                     echo '<div class="status-message">' . $_SESSION['status_message'] . '</div>';
                     unset($_SESSION['status_message']);
@@ -17,7 +15,7 @@ include_once "../includes/header.php";
             ?>
         </p>
         <section class="login-form">
-            <form action="<?= ROOT_DIR ?>login/authenticate.php" method="post">
+            <form action="<?= ROOT_DIR ?>authenticate" method="post">
                 <label for="username">Username</label>
                 <input type="text"
                        class=""
@@ -35,12 +33,15 @@ include_once "../includes/header.php";
             </form> 
             <div class="login-options">
                 <div>
-                    <a href="../register">Don't have an account? <span>REGISTER</span></a>
+                    <a href="register">Don't ahave an account? <span>REGISTER</span></a>
                 </div>
             </div>
         </section>
     </main>
     <div class="msg"></div>
+    <?php
+    include 'includes/footer.php';
+    ?>
  
     
 

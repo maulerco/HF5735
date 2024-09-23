@@ -1,9 +1,9 @@
-# Enable Rewrite Engine
 RewriteEngine On
+RewriteBase /HF5735/musiconline/
 
-# Rewrite for cleaner URLs
-# Map /login, /register, etc. to their respective folders
-RewriteRule ^$ index.php [L]
-RewriteRule ^register$ register/index.php [L]
-RewriteRule ^admin$ public/admin/index.php [L]
-RewriteRule ^user$ public/user/index.php [L]
+# If the file or directory exists, skip rewriting
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Rewrite all other URLs to index.php with the query parameter 'url'
+RewriteRule ^(.*)$ index.php?url=$1 [QSA,L]
